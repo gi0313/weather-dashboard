@@ -11,3 +11,4 @@ A Simple web app that lets a user input a city and look at the current weather a
 * Open weather
 
 ## Website
+https://gi0313.github.io/weather-dashboard/
