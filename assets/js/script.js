@@ -28,23 +28,21 @@ var getCityData = function(location) {
                     //latitude
                     let lat = data[0].lat;
                     console.log(lon, lat);
-                displayWeather(location);
 
                 //call the current weather
                 var weatherApi = "https:api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=5c6e1425d7ae9ef9ee8b2d6a28ba77f3";
-                console.log(weatherApi);
-                //var weatherType = data.weather.description;
-                //console.log(weatherType);
+                //console.log(weatherApi);
+                var weatherType = data[0].weather;
+                console.log(weatherType);
                 var weatherEl =document.createElement("div");
                 weatherEl.classList = "list-item flex-row justify-space-between align-center";
                 var titleEl = document.createElement("span");
                 //titleEl.textContent = weatherType;
                 //append to container
                 //weatherType.appendChild(titleEl);
+                displayWeather(location);
                 })
-            } else {
-                alert("City not found!");
-            }
+            } 
         })
 }
 
